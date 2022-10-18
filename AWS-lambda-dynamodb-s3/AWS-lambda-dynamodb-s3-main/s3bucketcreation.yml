@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: blazeclan-lambda
+      Tags: 
+        - Key: "Name"
+          Value: "blazeclan-lambda"
+        - Key: "Owner"
+          Value: "Arvid"
+        - Key: "Project"
+          Value: "blazeclan"
+        - Key: "Env"
+          Value: "dev"        
